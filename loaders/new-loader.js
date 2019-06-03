@@ -9,7 +9,7 @@ module.exports = function(source) {
   const options = loaderUtils.getOptions(this);
 
   // Use a regex expression to find all src="..." in source
-  const regex = /src={(.*?)}/g;
+  const regex = /src="(.*?)"/g;
   const matches = source.match(regex);
   // Copy source
   var resultSource = source;
@@ -23,6 +23,7 @@ module.exports = function(source) {
       );
     });
   }
+  console.log(resultSource);
   return resultSource;
 };
 
@@ -43,5 +44,5 @@ const pathToHashedPath = (srcValue, hashLength) => {
     "utf8"
   );
   const hash = md5(data).slice(0, hashLength);
-  return `src={require("${pathOnly}?h=${hash}")}`;
+  return `src="${pathOnly}?h=${hash}"`;
 };

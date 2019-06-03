@@ -9,7 +9,6 @@ class App extends Component {
   };
 
   render() {
-    console.log("js ran!!!");
     return (
       <div>
         <img

@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div>
         <img
-          src="./logo.jpg"
+          src="/logo.jpg"
           alt="logo"
           style={{ width: "200px", height: "100px" }}
         />

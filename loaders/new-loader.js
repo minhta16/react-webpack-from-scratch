@@ -23,7 +23,6 @@ module.exports = function(source) {
       );
     });
   }
-  console.log(resultSource);
   return resultSource;
 };
 

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
-    "build": "webpack -p && shopt -s extglob && cpx './public/!(index.html)' ./dist/",
+    "build": "node ./scripts/build.js && webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

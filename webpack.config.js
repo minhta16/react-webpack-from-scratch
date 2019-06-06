@@ -46,7 +46,7 @@ module.exports = {
             loader: "babel-loader"
           },
           {
-            loader: "new-loader",
+            loader: "hashbust-loader",
             options: {
               hashLength: 8
             }
